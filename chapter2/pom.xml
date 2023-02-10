@@ -20,10 +20,10 @@
 
     <modules>
       <module>chapter2-recipe1</module>
-      <module>chapter2-recipe2</module>
+<!--      <module>chapter2-recipe2</module>-->
       <module>chapter2-recipe3</module>
-      <module>chapter2-recipe4</module>
-      <module>chapter2-recipe5</module>
+<!--      <module>chapter2-recipe4</module>-->
+<!--      <module>chapter2-recipe5</module>-->
       <module>chapter2-recipe6</module>
     </modules>
 
