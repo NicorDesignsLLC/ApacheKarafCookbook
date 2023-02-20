@@ -12,11 +12,14 @@
  mvn archetype:generate \
   -DarchetypeGroupId=org.apache.karaf.archetypes \
   -DarchetypeArtifactId=karaf-command-archetype \
-  -DarchetypeVersion=3.0.0 \
+  -DarchetypeVersion=3.2.1 \
   -DgroupId=com.mycompany \
   -DartifactId=com.mycompany.command \
   -Dversion=1.0.0-SNAPSHOT \
   -Dpackage=com.mycompany.package
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.karaf.archetypes -DarchetypeArtifactId=karaf-command-archetype -DarchetypeVersion=4.4.3
+-DgroupId=com.mycompany -DartifactId=com.mycompany.command -Dversion=1.0.0-SNAPSHOT -Dpackage=com.mycompany.package
 
  When the archetype is executed you will be presented
  with several choices as below:
