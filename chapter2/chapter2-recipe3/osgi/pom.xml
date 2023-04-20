@@ -24,7 +24,7 @@
     <properties>
         <maven-bundle-plugin.version>2.4.0</maven-bundle-plugin.version>
         <osgi.version>5.0.0</osgi.version>
-        <camel.version>2.12.2</camel.version>
+        <camel.version>3.14.3</camel.version>
     </properties>
 
     <dependencies>
