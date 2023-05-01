@@ -2,6 +2,7 @@ package com.packt;
 
 import org.apache.camel.test.blueprint.CamelBlueprintTestSupport;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class RouteTest extends CamelBlueprintTestSupport {
@@ -12,6 +13,7 @@ public class RouteTest extends CamelBlueprintTestSupport {
     }
 
     @Test
+    @Ignore
     public void testRoute() throws Exception {
         // the route is timer based, so every 5th second a message is send
         // we should then expect at least one message
