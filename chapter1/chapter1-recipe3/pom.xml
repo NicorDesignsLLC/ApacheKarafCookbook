@@ -15,10 +15,28 @@
     <artifactId>chapter1-recipe3</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 1 :: Recipe 3 :: </name>
+    <name>Chapter 1 :: Recipe 3 ::</name>
 
     <modules>
-      <module>branding</module>
+        <module>branding</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:unchecked</arg>
+                        <arg>-Xlint:deprecation</arg>
+                    </compilerArgs>
+                    <source>11</source>
+                    <target>11</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

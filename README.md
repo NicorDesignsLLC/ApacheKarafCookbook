@@ -1,6 +1,8 @@
 Apache Karaf Cookbook
 =====================
 
+https://www.linkedin.com/pulse/maven-getting-rid-parent-pom-mari%C3%A1n-varga/?trk=articles_directory
+
 Samples for Packt Publishing's Apache Karaf Cookbook.
 
 The samples in this project were written with JDK 1.7 and Maven 3.0.5.
