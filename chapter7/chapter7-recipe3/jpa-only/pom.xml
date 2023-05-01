@@ -74,7 +74,8 @@
                 <version>1.2</version>
                 <configuration>
                     <addDefaultConstructor>true</addDefaultConstructor>
-                    <enforcePropertyRestriction>true</enforcePropertyRestriction>
+<!--                    <enforcePropertyRestriction>true</enforcePropertyRestriction>-->
+
                 </configuration>
                 <executions>
                     <execution>
