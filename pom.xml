@@ -13,7 +13,7 @@
   <name>Apache Karaf Cookbook Parent Pom</name>
 
   <prerequisites>
-    <maven>3.0.5</maven>
+    <maven>3.9.2</maven>
   </prerequisites>
 
   <scm>
@@ -38,6 +38,7 @@
     <maven-bundle-version>2.3.7</maven-bundle-version>
     <jaxb-version>4.0.1</jaxb-version>
     <jaxb-api-version>2.3.2</jaxb-api-version>
+    <build.plugins.plugin.version>3.4.0</build.plugins.plugin.version>
   </properties>
 
 
