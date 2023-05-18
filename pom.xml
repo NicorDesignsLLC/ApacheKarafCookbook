@@ -4,73 +4,93 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.packt</groupId>
-  <artifactId>apache-karaf-cookbook</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.packt</groupId>
+    <artifactId>apache-karaf-cookbook</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
 
-  <name>Apache Karaf Cookbook Parent Pom</name>
+    <name>Apache Karaf Cookbook Parent Pom</name>
 
-  <prerequisites>
-    <maven>3.9.2</maven>
-  </prerequisites>
+    <prerequisites>
+        <maven>3.9.2</maven>
+    </prerequisites>
 
-  <scm>
-    <url>https://github.com/jgoodyear/ApacheKarafCookbook</url>
-    <connection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</connection>
-    <developerConnection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+    <scm>
+        <url>https://github.com/jgoodyear/ApacheKarafCookbook</url>
+        <connection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</connection>
+        <developerConnection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!-- maven surefire version added here so it could be overridden -->
-    <junit-platform.version>5.3.2</junit-platform.version>
-    <tests.skip>true</tests.skip>
-    <maven.surefire.plugin.version>3.0.0</maven.surefire.plugin.version>
-    <maven.surefire.report.plugin.version>2.5</maven.surefire.report.plugin.version>
-    <maven.eclipse.plugin.version>2.5.1</maven.eclipse.plugin.version>
-    <maven.pax.plugin.version>1.6.0</maven.pax.plugin.version>
-    <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
-    <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
-    <maven-bundle-version>2.3.7</maven-bundle-version>
-    <jaxb-version>4.0.1</jaxb-version>
-    <jaxb-api-version>2.3.2</jaxb-api-version>
-    <build.plugins.plugin.version>3.4.0</build.plugins.plugin.version>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- maven surefire version added here so it could be overridden -->
+        <junit-platform.version>5.3.2</junit-platform.version>
+        <tests.skip>true</tests.skip>
+        <maven.surefire.plugin.version>3.0.0</maven.surefire.plugin.version>
+        <maven.surefire.report.plugin.version>2.5</maven.surefire.report.plugin.version>
+        <maven.eclipse.plugin.version>2.5.1</maven.eclipse.plugin.version>
+        <maven.pax.plugin.version>1.6.0</maven.pax.plugin.version>
+        <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
+        <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
+        <maven-bundle-version>2.3.7</maven-bundle-version>
+        <jaxb-version>4.0.1</jaxb-version>
+        <jaxb-api-version>2.3.2</jaxb-api-version>
+        <build.plugins.plugin.version>3.4.0</build.plugins.plugin.version>
+    </properties>
 
 
-  <modules>
-    <module>chapter1</module>
-    <module>chapter2</module>
-    <module>chapter3</module>
-    <module>chapter4</module>
-    <module>chapter5</module>
-    <module>chapter6</module>
-    <module>chapter7</module>
-    <module>chapter8</module>
-    <module>chapter9</module>
-    <module>chapter10</module>
-  </modules>
+    <modules>
+        <module>chapter1</module>
+        <module>chapter2</module>
+        <module>chapter3</module>
+        <module>chapter4</module>
+        <module>chapter5</module>
+        <module>chapter6</module>
+        <module>chapter7</module>
+        <module>chapter8</module>
+        <module>chapter9</module>
+        <module>chapter10</module>
+    </modules>
 
-  <dependencies>
-    <!-- API, java.xml.bind module -->
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.0</version>
-    </dependency>
+    <dependencies>
+        <!-- API, java.xml.bind module -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
 
-    <!-- Runtime, com.sun.xml.bind module -->
-    <dependency>
-      <groupId>org.glassfish.jaxb</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <version>4.0.0</version>
-    </dependency>
-  </dependencies>
+        <!-- Runtime, com.sun.xml.bind module -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+    </dependencies>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <compilerArgs>
+                            <arg>-Xlint:unchecked</arg>
+                            <arg>-Xlint:deprecation</arg>
+                        </compilerArgs>
+                        <source>8</source>
+                        <target>8</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
 </project>
